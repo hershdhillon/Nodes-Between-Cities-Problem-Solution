@@ -104,7 +104,6 @@ class Solution {
             visited[nowVisiting.id] = true;
             if (adj[nowVisiting.id].hasNext()) {
                 City linkedCity = adj[nowVisiting.id].next();
-//            for (City linkedCity: nowVisiting.linkedCities) {
                 if (!visited[linkedCity.id]) {
                     linkedCity.distance = nowVisiting.distance + 1;
                     ++numberAtThisDistance[linkedCity.distance-1];
